@@ -118,20 +118,24 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Expanded(
               child: ListView.builder(
-                itemBuilder: (context, index) => Text('SHU'),
+                itemBuilder: (context, index) => const Text('SHU'),
                 itemCount: 10,
               ),
             ),
             const Text(
               'You have pushed the button this many times:',
             ),
-            Text('MD SHAHRIAR'),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-            const SizedBox(
-              height: 120,
+            const SelectableText('MD SHAHRIAR'),
+            Column(
+              children: [
+                Text(
+                  '$_counter',
+                  style: Theme.of(context).textTheme.headlineMedium,
+                ),
+                const SizedBox(
+                  height: 120,
+                ),
+              ],
             ),
           ],
         ),
